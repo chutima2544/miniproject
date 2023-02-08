@@ -365,25 +365,61 @@ main{
 /* ...........form..start......... */
 .creatPost{
     width: 100%;
+    background: var(--color-white); 
+    border-radius: 6px;
+    padding: 20px;
+    columns: #626262;   
+}
+.user-phots{
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-
-    border-radius: var(--border-radius);
-    padding: .4rem var(--card-padding);
-    background: var(--color-white);    
-    
 }
-.creatPost .text-post{
-    background: transparent;
-    justify-self: start;
+.user-phots img{
+    width: 45px;
+    border-radius: 50px;
+    aspect-ratio: 1/1;    
+    overflow: hidden;
+    margin-right: 10px;
+}
+.user-phots p{
+    margin-bottom: -5px;
+    font-weight: 500;
+    color: #626262;
+}
+.user-phots small{
+    font-size: 12px;
+}
+.post-input{
+    padding-left: 55px;
+    padding-top: 20px;
+}
+.post-input textarea{
     width: 100%;
-    padding-left: 1rem;
-    margin-right: 1rem;  
-
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: var(--color-white);
+    resize: none;
 }
-.creatPost input[type="text"]{
-    color: var(--color-dark);  
+.add-post{
+    display: flex;
+    margin-top: 10px;
+}
+.add-post a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #626262;
+    margin-right: 30px;
+    font-size: 13px;
+}
+.add-post a img{
+    width: 20px;
+    margin-right: 10px;
+}
+.post{
+    display: flex;
+    margin-top: 10px;
 }
 /* ...........form..end......... */
 
@@ -823,3 +859,148 @@ main{
     box-shadow: 0 0 1rem var(--color-primary);
 }
 
+/*----------- PROFILE PAGE ----------------*/
+.profile-container{
+    padding: 20px 15%;
+    color: #626262;
+}
+.profile-detail{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.pd-row{
+    display: flex;
+    align-items: flex-start;
+}
+.pd-images{
+    width: 10rem;
+    margin-right: 20px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;    
+    overflow: hidden;
+}
+.pd-row div h3{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 55px;
+}
+.pd-row div p{
+    font-size: 13px;
+}
+.pd-row div img{
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 12px;
+}
+.pd-right button{
+    height: 45px;
+    background: #1876f2;
+    border: 0;
+    outline: 0;
+    padding: 6px 10px;
+    display:  inline-flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+.pd-right button i{
+    height: 15px;
+    margin-right: 10px;
+}
+.pd-right button:nth-child(2){
+    background: #e4e6eb;
+    color: #000;
+}
+.profile-info{
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.info-col{
+    flex-basis: 33%;
+}
+.post-col{
+    flex-basis: 65%;
+}
+.profile-intro{
+    background: var(--color-white);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.profile-intro h3{
+    font-weight: 600;
+}
+.intro-text{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 15px;
+}
+.profile-intro hr{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 24px 0;
+}
+.profile-intro ul li{
+    list-style: none;
+    font-size: 15px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+.profile-intro ul li i{
+    width: 26px;
+    margin-right: 10px;
+}
+.title-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-box a{
+    text-decoration: none;
+    color: #1876f2;
+    font-size: 14px;
+}
+.photo-box{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+.photo-box div img{
+    width: 100%;
+    cursor: pointer;
+}
+.profile-intro p{
+    font-size: 14px;
+}
+.friends-box{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+.friends-box div img{
+    width: 100%;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+.friends-box div{
+    position: relative;
+}
+.friends-box p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
